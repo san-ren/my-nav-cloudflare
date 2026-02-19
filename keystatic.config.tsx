@@ -180,6 +180,7 @@ export default config({
         repo: {
           owner: 'san-ren',
           name: 'my-nav-cloudflare',
+          clientId: 'Ov23lin8nszAfHkWTQyG'
       },
      
       },
