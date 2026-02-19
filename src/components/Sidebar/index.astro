@@ -1,0 +1,204 @@
+---
+import { LayoutDashboard, Star, Code, Palette, ChevronRight } from 'lucide-react';
+
+import './sidebar.css';
+
+const { navResources, currentId, siteConfig } = Astro.props;
+// 获取基础路径 (已去除末尾斜杠，例如 "" 或 "/my-nav")
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const Icons = { Star, Code, Palette, LayoutDashboard };
+---
+
+<aside 
+  id="sidebar"
+  style={{ width: 'var(--sidebar-width, 17rem)' }}
+  class="fixed top-0 left-0 z-50 h-[100dvh] bg-white/90 dark:bg-gray-900/90 backdrop-blur-2xl shadow-2xl md:shadow-none flex flex-col border-r border-slate-200/50 dark:border-slate-800/50 overflow-x-hidden will-change-transform transform -translate-x-full md:translate-x-0 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]"
+>
+  {/* Logo 区域 */}
+  <div class="h-16 px-6 flex-shrink-0 flex items-center gap-3 border-b border-slate-100/50 dark:border-slate-800/50 overflow-hidden">
+    <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center shadow-lg shadow-brand-500/30 text-white flex-shrink-0">
+      <img src={`${base}/favicon.svg`} class="w-5 h-5 invert brightness-0" alt="Logo" />
+    </div>
+    <span class="text-base font-black tracking-tight text-slate-800 dark:text-slate-100 truncate block">
+      {siteConfig.title}
+    </span>
+  </div>
+
+  {/* 菜单区域 */}
+  <nav id="sidebar-nav" class="flex-1 overflow-y-auto p-3 space-y-1 custom-scrollbar scrollbar-stable">
+    {navResources.map((page) => {
+      const isActivePage = page.id === currentId;
+      const PageIcon = Icons[page.icon] || LayoutDashboard;
+
+      return (
+        <div class="group/page mb-1">
+          <a href={`${base}/${page.id}`} 
+             class={`flex items-center gap-3 px-3 py-2 rounded-xl transition-all duration-200 font-bold overflow-hidden text-sidebar-link
+             ${isActivePage 
+               ? 'bg-brand-600 text-white shadow-md shadow-brand-500/20' 
+               : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-gray-800 hover:text-slate-900 dark:hover:text-slate-200'
+             }`}
+          >
+            <PageIcon size={18} className="flex-shrink-0" />
+            <span class="flex-1 truncate">{page.name}</span>
+          </a>
+
+          {isActivePage && page.groups && (
+            <div class="pl-0 mt-2 space-y-3 animate-in slide-in-from-left-2 duration-300">
+              {page.groups.map((group, groupIdx) => (
+                <div class="relative pl-3">
+                  <button 
+                    onclick={`window.scrollToSection('group-${groupIdx}'); window.closeSidebarMobile();`}
+                    class="w-full flex items-center gap-2 px-3 py-1 mb-1 font-extrabold text-slate-400 dark:text-slate-500 tracking-wider hover:text-brand-600 transition-colors text-left text-sidebar-group overflow-hidden"
+                    title={group.name}
+                  >
+                    <span class="truncate block w-full">{group.name}</span>
+                  </button>
+
+                  <div class="absolute left-[18px] top-6 bottom-2 w-[1px] bg-slate-200 dark:bg-slate-800 rounded-full"></div>
+
+                  <div class="space-y-0.5 pl-2">
+                    {group.categories.map((cat, catIdx) => {
+                      const hasTabs = cat.tabs && cat.tabs.length > 0;
+                      const uniqueId = `${groupIdx}-${catIdx}`;
+                      return (
+                        <div class="relative group/cat sidebar-item-container">
+                          <button 
+                            class={`sidebar-cat-btn w-full flex items-center justify-between px-2 py-1.5 rounded-lg font-medium text-sidebar-cat text-slate-600 dark:text-slate-400 hover:text-brand-600 hover:bg-slate-50 dark:hover:bg-brand-900/30 transition-colors z-10 relative overflow-hidden ${hasTabs ? 'has-sub-menu' : ''}`}
+                            data-target={`sidebar-sub-${uniqueId}`}
+                            onclick={!hasTabs ? `window.scrollToSection('cat-${uniqueId}'); window.closeSidebarMobile();` : ''}
+                            title={cat.name}
+                          >
+                            <span class="flex items-center gap-2.5 truncate max-w-[85%]">
+                              <span class="w-1 h-[1px] bg-slate-300 dark:bg-slate-700 group-hover/cat:bg-brand-400 transition-colors flex-shrink-0"></span>
+                              <span class="truncate">{cat.name}</span>
+                            </span>
+                            {hasTabs && (
+                              <ChevronRight size={14} className="arrow-icon text-slate-300 transition-transform duration-300 flex-shrink-0" />
+                            )}
+                          </button>
+                          
+                          {/* 浮窗 Tooltip 内容 */}
+                          {hasTabs && (
+                            <div class="sidebar-tooltip-source hidden">
+                               <div class="flex items-center gap-2 mb-3 px-1 border-b border-slate-100 dark:border-slate-700/50 pb-2">
+                                  <span class="w-1 h-3 bg-brand-600 rounded-full"></span>
+                                  <span class="text-xs font-black text-slate-700 dark:text-slate-200 uppercase tracking-widest">{cat.name}</span>
+                               </div>
+                               <div class="flex flex-wrap gap-2">
+                                 {cat.tabs.map((tab, tabIdx) => (
+                                   <button onclick={`window.scrollToTab('${uniqueId}', ${tabIdx});`} class="flex items-center px-3 py-1.5 text-xs font-bold rounded-full transition-all duration-200 whitespace-nowrap bg-slate-100 dark:bg-gray-800 text-slate-500 dark:text-slate-400 hover:text-brand-600 hover:bg-white dark:hover:bg-gray-700 hover:shadow-md hover:scale-105 border border-transparent hover:border-brand-100 dark:hover:border-brand-900/30">
+                                     {tab.tabName}
+                                   </button>
+                                 ))}
+                               </div>
+                            </div>
+                          )}
+
+                          {/* 折叠手风琴 */}
+                          {hasTabs && (
+                            <div id={`sidebar-sub-${uniqueId}`} class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out">
+                              <div class="overflow-hidden">
+                                <div class="pl-4 ml-1 border-l border-slate-100 dark:border-slate-800/50 space-y-0.5 pt-0.5 pb-1">
+                                  {cat.tabs.map((tab, tabIdx) => (
+                                    <button class="w-full text-left px-2 py-1 text-sidebar-tab text-slate-500 hover:text-brand-600 hover:bg-slate-50 dark:hover:bg-gray-800 transition-colors rounded-md truncate block" onclick={`window.scrollToTab('${uniqueId}', ${tabIdx}); window.closeSidebarMobile();`} title={tab.tabName}>{tab.tabName}</button>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      );
+    })}
+  </nav>
+  
+  {/* 底部页脚 */}
+  <div class="h-10 px-4 mt-auto border-t border-slate-100/50 dark:border-slate-800/50 shrink-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md safe-area-bottom overflow-hidden flex flex-row items-center justify-between gap-2">
+    <span class="text-[10px] text-slate-400 font-medium truncate">
+      © {new Date().getFullYear()} {siteConfig.author}
+    </span>
+    {/* 修改处：使用动态 base 变量拼接路径 */}
+    <a href={`${base}/changelog/`} class="shrink-0 flex items-center gap-1.5 text-[10px] font-bold text-slate-500 hover:text-brand-600 transition-colors py-1 px-2 rounded-md hover:bg-slate-50 dark:hover:bg-gray-800 group/log">
+      <span class="relative flex h-1.5 w-1.5">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75 group-hover/log:opacity-100"></span>
+        <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand-500"></span>
+      </span>
+      <span>更新记录</span>
+    </a>
+  </div>
+</aside>
+
+{/* 遮罩层 */}
+<div id="sidebar-overlay" onclick="window.closeSidebarMobile()"></div>
+
+{/* 关键脚本 1：内联脚本 (Inline Script) */}
+<script is:inline>
+(function() {
+  // 定义核心开关逻辑
+  window.toggleSidebarMobile = () => {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    if (!sidebar) return;
+    
+    // 检查当前是否开启（根据 transform 类名）
+    const isOpen = sidebar.classList.contains('translate-x-0');
+    if (isOpen) {
+      // 关闭
+      sidebar.classList.remove('translate-x-0');
+      sidebar.classList.add('-translate-x-full');
+      if (overlay) overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    } else {
+      // 开启
+      sidebar.style.marginLeft = '';
+      sidebar.classList.remove('-translate-x-full');
+      sidebar.classList.add('translate-x-0');
+      if (overlay) overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+  window.closeSidebarMobile = () => {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    if (sidebar) {
+      sidebar.style.marginLeft = '';
+      sidebar.classList.remove('translate-x-0');
+      sidebar.classList.add('-translate-x-full');
+    }
+    if (overlay) overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  // 状态自动修正
+  const initMobileState = () => {
+      if (window.innerWidth < 768) {
+       const sb = document.getElementById('sidebar');
+       if (sb) {
+           sb.style.marginLeft = '';
+           if (!sb.classList.contains('translate-x-0')) {
+               sb.classList.add('-translate-x-full');
+           }
+       }
+    }
+  };
+  
+  initMobileState();
+  document.addEventListener('astro:after-swap', initMobileState);
+})();
+</script>
+
+{/* 关键脚本 2：模块化脚本 (Module Script) */}
+<script>
+  import { initInteractive } from './interactive';
+  
+  initInteractive();
+  document.addEventListener('astro:after-swap', initInteractive);
+</script>

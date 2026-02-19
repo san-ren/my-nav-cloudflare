@@ -1,0 +1,535 @@
+{
+  "name": "玩机",
+  "id": "sub3-02-玩机",
+  "categories": [
+    {
+      "name": "国内",
+      "resources": [],
+      "tabs": [
+        {
+          "tabName": "patch",
+          "list": [
+            {
+              "name": "Shizuku",
+              "url": "https://github.com/RikkaApps/Shizuku",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "LSPatch",
+              "url": "https://github.com/JingMatrix/LSPatch",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "SPatch-Update（元萝卜）",
+              "url": "https://github.com/Katana-Official/SPatch-Update",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "NPatch",
+              "url": "https://github.com/7723mod/NPatch",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "Xposed Modules Repository",
+              "url": "https://github.com/Xposed-Modules-Repo",
+              "official_site": "https://modules.lsposed.org/",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            }
+          ]
+        },
+        {
+          "tabName": "archived",
+          "list": [
+            {
+              "name": "LSPosed/LSPatch",
+              "url": "https://github.com/LSPosed/LSPatch",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "HSSkyBoy/NPatch",
+              "url": "https://github.com/HSSkyBoy/NPatch",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "8MiYile/LSPatch-OP",
+              "url": "https://github.com/8MiYile/LSPatch-OP",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "模块",
+      "resources": [],
+      "tabs": [
+        {
+          "tabName": "QQ/WeChat",
+          "list": [
+            {
+              "name": "QAuxiliary",
+              "url": "https://modules.lsposed.org/module/io.github.qauxv/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "模了个块",
+              "url": "https://modules.lsposed.org/module/lzlnb.cnm.hook/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "Miko",
+              "url": "https://modules.lsposed.org/module/miko.client/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "QStory",
+              "url": "https://modules.lsposed.org/module/lin.xposed/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "XAutoDaily签到模块",
+              "url": "https://modules.lsposed.org/module/me.teble.xposed.autodaily/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "Tim小助手(TimTool)",
+              "url": "https://modules.lsposed.org/module/top.sacz.timtool/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "I'm Pad",
+              "url": "https://modules.lsposed.org/module/com.houvven.impad/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "FunBox",
+              "url": "https://modules.lsposed.org/module/have.fun/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "NbHook(微信模块)",
+              "url": "https://modules.lsposed.org/module/com.padi.hook.hookqq/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "1个神引 / GodHook",
+              "url": "https://modules.lsposed.org/module/cc.godhook/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "XChat",
+              "url": "https://modules.lsposed.org/module/com.xchat/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "糊脸WeChat",
+              "url": "https://modules.lsposed.org/module/com.lu.wxmask/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "VAvatar自动更换微信头像",
+              "url": "https://modules.lsposed.org/module/com.xconst.vavatar/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            }
+          ]
+        },
+        {
+          "tabName": "专用模块",
+          "list": [
+            {
+              "name": "知了 (Zhiliao)",
+              "url": "https://modules.lsposed.org/module/com.shatyuka.zhiliao/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "Make Bilibili Great Again!MBGA",
+              "url": "https://modules.lsposed.org/module/top.trangle.mbga/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "BiliRoamingX/BiliRoamingX",
+              "url": "https://github.com/BiliRoamingX/BiliRoamingX",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "哔哩漫游/BiliRoaming",
+              "url": "https://modules.lsposed.org/module/me.iacn.biliroaming/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "哔哩哔哩直播隐身观看",
+              "url": "https://modules.lsposed.org/module/io.github.lzghzr.biliveinvisible/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "YouTube去广告，锁屏播放 | NoAdsBackgroundPlaybackYT",
+              "url": "https://modules.lsposed.org/module/com.wovow.youtubehelper/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗦𝗽𝗲𝗲𝗱 𝗛𝗼𝗼𝗸",
+              "url": "https://modules.lsposed.org/module/Telegram.Speed.Hook/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "FuckCainiao",
+              "url": "https://modules.lsposed.org/module/io.github.duzhaokun123.fuckcainiao/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            }
+          ]
+        },
+        {
+          "tabName": "泛用性模块",
+          "list": [
+            {
+              "name": "Fuck for VIP",
+              "url": "https://modules.lsposed.org/module/com.bug.hookvip/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "AdClose",
+              "url": "https://modules.lsposed.org/module/com.close.hook.ads/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "冰社 IceCore",
+              "url": "https://modules.lsposed.org/module/me.bingyue.IceCore/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "NewHookVip",
+              "url": "https://modules.lsposed.org/module/top.hookvip.pro/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "Fuck for Game",
+              "url": "https://modules.lsposed.org/module/com.bug.gamehook/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "Fuck AD",
+              "url": "https://modules.lsposed.org/module/com.hujiayucc.hook/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "要妳命三千Xposed模組",
+              "url": "https://modules.lsposed.org/module/cn.kwaiching.hook/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "Bili调速 biliSpeed",
+              "url": "https://modules.lsposed.org/module/com.veo.hook.bili.speed/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "HookVip",
+              "url": "https://modules.lsposed.org/module/Hook.JiuWu.Xp/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "Close-Plus",
+              "url": "https://github.com/chumoew/Close-Plus",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "国外",
+      "resources": [],
+      "tabs": [
+        {
+          "tabName": "网站",
+          "list": [
+            {
+              "name": "网站",
+              "url": "",
+              "official_site": "",
+              "desc": "说明",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "Mobilism",
+              "url": "https://forum.mobilism.org/index.php?sid=27cfa46caa4443c9fbd92334446a3b3a",
+              "official_site": "",
+              "desc": "Android\\iPad\\iPhone\\Windows 电子书、有声书",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "APKMODY",
+              "url": "https://apkmody.com/",
+              "official_site": "",
+              "desc": "Android破解应用商店",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "HappyMod",
+              "url": "https://happymod.com/",
+              "official_site": "",
+              "desc": "Android破解应用商店",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "REXDL",
+              "url": "https://rexdl.com/",
+              "official_site": "",
+              "desc": "Android破解应用商店",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "HappyMod",
+              "url": "https://happymod.com/",
+              "official_site": "",
+              "desc": "官网和app都有内容",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "ACMarket",
+              "url": "https://acmarket.net/",
+              "official_site": "",
+              "desc": "官网仅发布官方app",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "BlackMod.Net",
+              "url": "https://blackmod.net/forum/",
+              "official_site": "",
+              "desc": "Android MOD 游戏的社区",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "Mod Download Fast",
+              "url": "https://moddownloadfast.com/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "forum.sbenny",
+              "url": "https://zh-cn.forum.sbenny.com/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "Androeed.ru",
+              "url": "https://androeed.store/",
+              "official_site": "",
+              "desc": "俄罗斯社区",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "An1",
+              "url": "https://an1.com/",
+              "official_site": "",
+              "desc": "俄罗斯社区",
+              "guide_id": "",
+              "icon": ""
+            }
+          ]
+        },
+        {
+          "tabName": "patch",
+          "list": [
+            {
+              "name": "Lucky Patcher",
+              "url": "https://www.luckypatchers.com/zh/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "ReVanced/revanced-manager",
+              "url": "https://github.com/ReVanced/revanced-manager",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "revanced-patches",
+              "url": "https://github.com/inotia00/revanced-patches",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "revanced-patches",
+              "url": "https://github.com/inotia00/revanced-patches",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "YouTube ReVanced",
+              "url": "https://revanced.to/youtube/",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "Infinity-For-Reddit",
+              "url": "https://github.com/Docile-Alligator/Infinity-For-Reddit",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "piko",
+              "url": "https://github.com/crimera/piko",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            },
+            {
+              "name": "twitter-apk",
+              "url": "https://github.com/crimera/twitter-apk",
+              "official_site": "",
+              "desc": "",
+              "guide_id": "",
+              "icon": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pageName": "sub3",
+  "pageConfig": {
+    "sortPrefix": "02"
+  }
+}

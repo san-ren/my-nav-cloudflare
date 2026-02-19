@@ -1,0 +1,14 @@
+---
+import KeystaticAdmin from '../../components/KeystaticAdmin';
+
+export const prerender = false;
+
+export function getStaticPaths() {
+  // 只需要入口路由，其他路由由 React SPA 处理
+  return [
+    { params: { params: undefined } },
+  ];
+}
+---
+
+<KeystaticAdmin client:only="react" />

@@ -1,0 +1,44 @@
+{
+  "visualTag": "🏠",
+  "name": ".",
+  "pageName": "home",
+  "pageConfig": {
+    "sortPrefix": "01"
+  },
+  "resources": [],
+  "categories": [
+    {
+      "name": "一览",
+      "resources": [
+        {
+          "toolbox": null,
+          "name": "NewsNow",
+          "url": "https://github.com/ourongxing/newsnow",
+          "official_site": "https://newsnow.busiyi.world/",
+          "desc": "实时新闻聚合阅读器",
+          "hide_badges": []
+        },
+        {
+          "toolbox": null,
+          "name": "小田田",
+          "url": "https://xydh.fun/xiaotiantian/",
+          "desc": "dg",
+          "hide_badges": []
+        },
+        {
+          "toolbox": null,
+          "name": "低调观影",
+          "url": "https://shouku123.com/tiantian/",
+          "hide_badges": []
+        },
+        {
+          "toolbox": null,
+          "name": "不死鸟",
+          "url": "https://iui.su/",
+          "hide_badges": []
+        }
+      ],
+      "tabs": []
+    }
+  ]
+}
