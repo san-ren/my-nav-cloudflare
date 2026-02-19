@@ -179,7 +179,7 @@ export default config({
         kind: 'github',
         repo: {
           owner: 'san-ren',
-          name: 'my-nav-cloudflare',
+          name: 'san-ren/my-nav-cloudflare',
           clientId: 'Ov23lin8nszAfHkWTQyG'
       },
      
