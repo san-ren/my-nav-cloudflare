@@ -83,7 +83,7 @@ export default defineConfig({
   base: myBase,
   
   // 生产环境 'always'，本地 'ignore'
-  trailingSlash: isDevCommand ? 'ignore' : 'always', 
+  trailingSlash: 'ignore', 
  
   output: 'server',
 
