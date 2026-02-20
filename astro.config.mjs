@@ -53,7 +53,7 @@ const integrations = [
 // 4. 动态加载开发环境专用功能
 if (isDevCommand) {
   // 4.1 加载 Keystatic (仅本地)
-  integrations.push(keystatic());
+  // integrations.push(keystatic());
 
   // 4.2 🔥🔥 注入智能解析 API (关键修改) 🔥🔥
   // 这段逻辑会将 src/components/keystatic/smart-parse.ts 
@@ -75,6 +75,8 @@ if (isDevCommand) {
     },
   });
 }
+
+integrations.push(keystatic()); 
 
 export default defineConfig({
   site: mySite,
