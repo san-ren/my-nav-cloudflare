@@ -17,7 +17,7 @@ const isDevCommand = process.argv.includes('dev');
 
 // 2. 强制设置 Base 路径
 // 本地开发用 '/'，生产打包强制用 '/my-nav'
-const myBase = isDevCommand ? '/' : '/my-nav';
+const myBase = '/my-nav';
 const mySite = 'https://san-ren.github.io';
 
 // 3. 定义集成列表
